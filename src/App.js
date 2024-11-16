@@ -1,24 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from "./pages/LandingPage";
+import ProfilePage from "./pages/ProfilePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import ContinentsPage from "./pages/ContinentsPage";
+import CountryDetailPage from './pages/CountryDetailPage';
+// import Header from "./components/header";
+import BottomBar from "./components/bottombar";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute"; // Import ProtectedRoute
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          {/* Halaman Login tanpa BottomBar */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          {/* Halaman dengan BottomBar */}
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <LandingPage />
+                <BottomBar />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <ProfilePage />
+                <BottomBar />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/continents"
+            element={
+              <ProtectedRoute>
+                <ContinentsPage />
+                <BottomBar />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/country/:countryName"
+            element={
+              <ProtectedRoute>
+                <CountryDetailPage />
+                <BottomBar />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </Router>
     </div>
   );
 }

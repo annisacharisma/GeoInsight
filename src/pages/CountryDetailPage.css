@@ -1,0 +1,92 @@
+/* Gaya untuk Kontainer Utama */
+.country-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Gaya Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 10px;
+}
+
+/* Gaya Input Search */
+.search-container input[type="text"] {
+    background-color: #edecec;
+    width: 90%;
+    max-width: 600px;
+    padding: 8px;
+    font-size: 0.875rem;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.country-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.country-card h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    background-color: rgb(0, 6, 121);
+    padding: 3px;
+    border-radius: 13px;
+}
+
+.country-card .country-flag {
+    width: 80%;
+    max-width: 300px;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Detail Negara */
+.country-details {
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+}
+
+.country-details p {
+    margin: 9px 0;
+}
+
+/* Tombol Go Back */
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(0, 6, 121);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #f43131;
+}

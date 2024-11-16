@@ -1,0 +1,144 @@
+/*src/components/modal/index.css */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background-color: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+  
+.modal-image {
+    width: 50%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+  
+.modal-details {
+    flex: 1;
+    text-align: left; /* Sesuaikan perataan teks */
+    overflow: auto;
+    padding-right: 10px; /* Tambahkan padding untuk kenyamanan */
+    line-height: 1.8; /* Atur jarak antar teks */
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    margin: 20px 0;
+}
+
+button.modal-see-more {
+    margin-top: 30px;
+    padding: 8px 22px;
+    background-color: #1f8ef1;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button.modal-see-more:hover {
+    background-color: #007bff;
+    transform: scale(1.05);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    background-color: #f05454;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%; /* Buat bentuk melingkar */
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #f43131;
+    transform: scale(1.1); /* Sedikit perbesar saat hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .modal {
+        width: 95%; /* Lebih besar di layar kecil */
+    }
+
+    .modal-content-wrapper {
+        text-align: center;
+    }
+
+    .modal-image {
+        margin-top: 20px;
+    }
+
+    .modal-details {
+        font-size: 0.8rem; /* Ukuran teks lebih kecil */
+        line-height: 1.5;
+    }
+
+    .modal-content h2 {
+        font-size: 1.2rem; /* Ukuran judul lebih kecil */
+    }
+
+    .close-btn {
+        font-size: 1rem;
+        width: 20px;
+        height: 20px;
+    }
+
+    button.modal-see-more {
+        margin-top: 10px;
+    }
+}
