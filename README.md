@@ -24,4 +24,4 @@ Link to the API Integration: [https://restcountries.com](##api-integration).
 
 ## Live Demo
 You can access the GeoInsight application here:
-https://ta-ppb-icha.web.app/(##live-demo)
+[https://ta-ppb-icha.web.app/](##live-demo).
