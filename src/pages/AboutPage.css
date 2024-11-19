@@ -1,0 +1,119 @@
+/* src/pages/AboutPage.css */
+.about-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 60px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+.about-page p {
+    text-align: justify;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background: #eee;
+}
+
+.developer-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+.developer-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; 
+    margin-bottom: 20px;
+}
+
+.developer-info {
+    flex: 1;
+    min-width: 200px; 
+}
+
+.developer-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.developer-info ul li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 15px;
+    }
+
+    .developer-profile {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+    }
+
+    .developer-photo {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .developer-info {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .developer-photo {
+        width: 120px; 
+        height: 120px;
+    }
+}
