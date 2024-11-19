@@ -5,11 +5,11 @@ import LandingPage from "./pages/LandingPage";
 import ProfilePage from "./pages/ProfilePage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import AboutPage from "./pages/AboutPage";
 import ContinentsPage from "./pages/ContinentsPage";
 import CountryDetailPage from './pages/CountryDetailPage';
-// import Header from "./components/header";
 import BottomBar from "./components/bottombar";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute"; // Import ProtectedRoute
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import "./App.css";
 
 function App() {
@@ -35,6 +35,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <ProfilePage />
+                <BottomBar />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <ProtectedRoute>
+                <AboutPage />
                 <BottomBar />
               </ProtectedRoute>
             }
